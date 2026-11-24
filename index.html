@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmzFlipla | Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Amz<span>Flipla</span></div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput"
+                    placeholder="Search for products...">
+                <button onclick="searchProducts()">🔍</button>
+            </div>
+
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#products">Products</a>
+                <a href="#deals">Deals</a>
+                <a href="#">Login</a>
+                <a href="#" class="cart">🛒 Cart <span id="cartCount">0</span></a>
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#deals">Deals</a>
+        <a href="#">Login</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Big Shopping Days!</h1>
+            <p>Discover amazing products at unbelievable prices.</p>
+            <a href="#products" class="shop-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop By Category</h2>
+        <div class="category-container">
+            <div class="category">📱<p>Electronics</p></div>
+            <div class="category">👕<p>Fashion</p></div>
+            <div class="category">🏠<p>Home</p></div>
+            <div class="category">⌚<p>Accessories</p></div>
+            <div class="category">👟<p>Footwear</p></div>
+        </div>
+    </section>
+
+    <!-- Deals Banner -->
+    <section class="deals" id="deals">
+        <h2>🔥 Special Offers</h2>
+        <p>Get up to 50% OFF on selected products!</p>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <h2>Trending Products</h2>
+
+        <div class="product-container" id="productContainer">
+
+            <div class="product-card" data-name="Headphones">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+                <h3>Wireless Headphones</h3>
+                <p class="price">₹1,499</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Smart Watch">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p class="price">₹2,499</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Shoes">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Shoes">
+                <h3>Sports Shoes</h3>
+                <p class="price">₹1,999</p>
+                <p class="rating">⭐⭐⭐⭐⭐</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="Backpack">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" alt="Backpack">
+                <h3>Stylish Backpack</h3>
+                <p class="price">₹999</p>
+                <p class="rating">⭐⭐⭐⭐</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+        </div>
+        <p id="noResults" hidden>No products found!</p>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get updates about new products and exciting offers.</p>
+        <form onsubmit="subscribe(event)">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>AmzFlipla</h2>
+        <p>Your one-stop destination for online shopping.</p>
+        <p>© 2026 AmzFlipla. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
